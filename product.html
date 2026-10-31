@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- @include head -->
+    <title>Sofa Medina 3-seater — EL Arika</title>
+    <meta name="description" content="Sofa Medina 3-seater in sage green fabric at the lowest price. 0% financing, delivery and assembly across Algeria." />
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <main id="main" class="container-x pb-16">
+      <nav aria-label="Breadcrumb" class="pt-5 text-[13px] text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="index.html" class="hover:text-brand" data-i18n="bc.home">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a href="category.html" class="hover:text-brand" data-crumb-cat>Sofas</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page" class="font-semibold text-ink" data-crumb-name>Sofa</span></li>
+        </ol>
+      </nav>
+
+      <div class="mt-4 grid lg:grid-cols-[1.25fr_1fr] gap-8 xl:gap-14 items-start">
+        <!-- ================= Gallery ================= -->
+        <section aria-label="Product images" class="lg:sticky lg:top-[150px]">
+          <div class="relative rounded-card overflow-hidden border border-line bg-white aspect-[4/3]">
+            <!-- photo mode (hover zoom) -->
+            <div class="zoomable absolute inset-0" data-stage="photo" tabindex="0" aria-label="Zoom image: move the pointer over the photo, or press Enter" data-i18n-aria="pdp.zoom">
+              <img data-main-img alt="" class="absolute inset-0 w-full h-full object-cover" width="1200" height="900" fetchpriority="high" />
+            </div>
+            <!-- 3D mode (React Three Fiber island, mounted on first view) -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,#ffffff,#eeeeee)]" data-stage="3d" hidden>
+              <div class="absolute inset-0" data-viewer-island>
+                <div data-island-root class="absolute inset-0"></div>
+              </div>
+              <div class="absolute bottom-4 inset-x-0 flex justify-center gap-2 z-10">
+                <button class="px-4 h-10 text-sm" data-glass="button" data-glass-type="pill" data-glass-tint=".55" data-viewer-reset>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 5v6h-6"/></svg>
+                  <span class="glass-button-text" data-i18n="pdp.reset">Reset view</span>
+                </button>
+                <button class="px-4 h-10 text-sm" data-glass="button" data-glass-type="pill" data-glass-tint=".55" data-viewer-spin aria-pressed="true">
+                  <span class="glass-button-text" data-i18n="pdp.spin">Auto-rotate</span>
+                </button>
+              </div>
+              <p class="absolute top-16 inset-x-0 text-center text-[12px] font-semibold text-muted" data-i18n="pdp.drag">Drag to rotate · scroll to zoom</p>
+            </div>
+            <!-- room mode -->
+            <div class="absolute inset-0" data-stage="room" hidden>
+              <img data-room-img alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+            </div>
+
+            <div class="absolute top-3 start-3 z-10 flex flex-wrap gap-1.5" data-pdp-badges></div>
+            <!-- view switcher (liquid glass segmented control) -->
+            <div class="absolute top-3 end-3 z-10 flex p-1 gap-1" role="tablist" aria-label="View" data-glass data-glass-type="pill" data-glass-tint=".45" data-view-switch>
+              <button role="tab" aria-selected="true" data-view="photo" class="px-3 h-8 rounded-pill text-[13px] font-bold aria-selected:bg-white aria-selected:shadow-card" data-i18n="pdp.photos">Photos</button>
+              <button role="tab" aria-selected="false" data-view="3d" class="px-3 h-8 rounded-pill text-[13px] font-bold aria-selected:bg-white aria-selected:shadow-card inline-flex items-center gap-1"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 20.5 7.5v9L12 21.2 3.5 16.5v-9z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9.2"/></svg>360°</button>
+              <button role="tab" aria-selected="false" data-view="room" class="px-3 h-8 rounded-pill text-[13px] font-bold aria-selected:bg-white aria-selected:shadow-card" data-i18n="pdp.room">In the room</button>
+            </div>
+          </div>
+          <div class="mt-3 grid grid-cols-5 gap-2" role="group" aria-label="Thumbnails" data-thumbs></div>
+        </section>
+
+        <!-- ================= Buy box ================= -->
+        <section aria-labelledby="pdp-name">
+          <div class="flex flex-wrap gap-1.5" data-pdp-badges-inline></div>
+          <h1 id="pdp-name" class="h2 mt-2 lg:text-[34px]!" data-pdp-name>Sofa</h1>
+          <div class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted">
+            <span><span data-i18n="pdp.code">Code</span>: <span class="font-semibold text-ink" data-pdp-code></span></span>
+            <a href="#pdp-tabs" class="inline-flex items-center gap-1.5 hover:text-brand"><span class="stars" data-pdp-stars aria-hidden="true">★★★★★</span><span data-pdp-rating></span></a>
+          </div>
+
+          <div class="mt-5 p-5 rounded-card bg-surface">
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <span data-pdp-price></span>
+              <span class="price-old" data-pdp-old></span>
+              <span class="discount-pill" data-pdp-pct></span>
+            </div>
+            <p class="mt-1 text-sm font-bold text-success" data-pdp-save></p>
+            <div class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+              <span class="font-semibold text-trust" data-i18n="pdp.or">or</span>
+              <label class="sr-only" for="months" data-i18n="pdp.months">Number of instalments</label>
+              <select id="months" class="input h-9! min-h-9! w-auto py-0 text-sm font-bold text-trust" data-months>
+                <option value="3">3×</option><option value="6">6×</option><option value="12" selected>12×</option><option value="24">24×</option>
+              </select>
+              <span class="font-extrabold text-trust text-base" data-monthly></span>
+              <span class="badge badge-promo" data-rate>0%</span>
+            </div>
+          </div>
+
+          <!-- Colour -->
+          <fieldset class="mt-6">
+            <legend class="label"><span data-i18n="pdp.color">Colour</span>: <span class="font-semibold" data-color-name></span></legend>
+            <div class="flex flex-wrap gap-3" role="radiogroup" data-colors></div>
+          </fieldset>
+          <!-- Size / configuration -->
+          <fieldset class="mt-5" data-size-group>
+            <legend class="label" data-i18n="pdp.size">Size</legend>
+            <div class="flex flex-wrap gap-2" role="radiogroup" data-sizes></div>
+          </fieldset>
+
+          <div class="mt-6 flex gap-3" data-buy-anchor>
+            <div class="flex items-center rounded-pill border border-line h-12" role="group" aria-label="Quantity" data-i18n-aria="pdp.qty">
+              <button class="w-11 h-full grid place-items-center hover:text-brand" data-qty="-1" aria-label="Decrease quantity"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+              <input class="w-10 text-center font-bold bg-transparent" value="1" inputmode="numeric" aria-label="Quantity" data-qty-input />
+              <button class="w-11 h-full grid place-items-center hover:text-brand" data-qty="1" aria-label="Increase quantity"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+            <button class="btn btn-primary flex-1" data-pdp-add>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+              <span data-i18n="card.add">Add to cart</span>
+            </button>
+            <button class="icon-btn w-12! h-12! border border-line wish-btn" data-wish aria-pressed="false" data-i18n-aria="card.wish" aria-label="Add to wishlist"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-9.3-9.2C1.5 7.5 3.6 4 7.1 4c2 0 3.6 1.1 4.9 2.8C13.3 5.1 14.9 4 16.9 4c3.5 0 5.6 3.5 4.4 6.8C19.5 15.4 12 20 12 20z"/></svg></button>
+          </div>
+          <button class="btn btn-secondary btn-block mt-3" data-open-stock>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9.5 4.5 4h15L21 9.5M3 9.5h18M3 9.5a3 3 0 0 0 6 0 3 3 0 0 0 6 0 3 3 0 0 0 6 0M5 12v8h14v-8M10 20v-5h4v5"/></svg>
+            <span data-i18n="pdp.stock">Check in-store availability</span>
+          </button>
+
+          <!-- Delivery & assembly -->
+          <fieldset class="mt-6 grid gap-2">
+            <legend class="label" data-i18n="pdp.delivery">Delivery &amp; assembly</legend>
+            <label class="opt"><input type="radio" name="ship" value="pickup" /><span class="flex-1"><span class="font-bold block" data-i18n="ship.pickup">Click &amp; collect in store</span><span class="text-[13px] text-muted" data-i18n="ship.pickup.d">Ready in 48 h · free</span></span><span class="font-bold text-success" data-i18n="free">Free</span></label>
+            <label class="opt"><input type="radio" name="ship" value="home" checked /><span class="flex-1"><span class="font-bold block" data-i18n="ship.home">Home delivery</span><span class="text-[13px] text-muted"><span data-i18n="ship.eta">Estimated</span> <span data-eta></span></span></span><span class="font-bold" data-ship-price="home"></span></label>
+            <label class="opt"><input type="radio" name="ship" value="assembly" /><span class="flex-1"><span class="font-bold block" data-i18n="ship.assembly">Delivery + professional assembly</span><span class="text-[13px] text-muted" data-i18n="ship.assembly.d">Our fitters assemble and take the packaging away</span></span><span class="font-bold" data-ship-price="assembly"></span></label>
+          </fieldset>
+
+          <ul class="mt-6 grid gap-2 text-sm">
+            <li class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" class="text-success" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-i18n="pdp.t1">30-day free returns</span></li>
+            <li class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" class="text-success" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-i18n="pdp.t2">2-year warranty</span></li>
+            <li class="flex items-center gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" class="text-success" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span data-i18n="pdp.t3">Secure payment · CIB, Edahabia, cash on delivery</span></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ================= Tabs ================= -->
+      <section id="pdp-tabs" class="mt-14" aria-label="Product details">
+        <div class="tabs" role="tablist" aria-label="Product details" data-pdp-tabs>
+          <button class="tab" role="tab" aria-selected="true" aria-controls="tab-desc" id="t-desc" data-i18n="tab.desc">Description</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-dim" id="t-dim" data-i18n="tab.dim">Dimensions</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-mat" id="t-mat" data-i18n="tab.mat">Materials</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-dl" id="t-dl" data-i18n="tab.dl">Downloads</button>
+        </div>
+        <div id="tab-desc" role="tabpanel" aria-labelledby="t-desc" class="py-6 max-w-[860px] text-[15px] leading-relaxed" data-tab-desc></div>
+        <div id="tab-dim" role="tabpanel" aria-labelledby="t-dim" class="py-6" hidden data-tab-dim></div>
+        <div id="tab-mat" role="tabpanel" aria-labelledby="t-mat" class="py-6" hidden data-tab-mat></div>
+        <div id="tab-dl" role="tabpanel" aria-labelledby="t-dl" class="py-6" hidden>
+          <ul class="grid sm:grid-cols-2 gap-3 max-w-[760px]">
+            <li><a href="#" class="flex items-center gap-3 p-4 rounded-card border border-line hover:border-brand"><span class="grid place-items-center w-11 h-11 rounded bg-[#fff1f1] text-brand font-extrabold text-[11px]">PDF</span><span class="flex-1"><span class="block font-bold" data-i18n="dl.assembly">Assembly instructions</span><span class="text-[13px] text-muted">PDF · 2.4 MB</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></li>
+            <li><a href="#" class="flex items-center gap-3 p-4 rounded-card border border-line hover:border-brand"><span class="grid place-items-center w-11 h-11 rounded bg-[#fff1f1] text-brand font-extrabold text-[11px]">PDF</span><span class="flex-1"><span class="block font-bold" data-i18n="dl.sheet">Technical data sheet</span><span class="text-[13px] text-muted">PDF · 640 KB</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></li>
+            <li><a href="#" class="flex items-center gap-3 p-4 rounded-card border border-line hover:border-brand"><span class="grid place-items-center w-11 h-11 rounded bg-[#e7ecf8] text-trust font-extrabold text-[11px]">PDF</span><span class="flex-1"><span class="block font-bold" data-i18n="dl.care">Care guide</span><span class="text-[13px] text-muted">PDF · 310 KB</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></li>
+            <li><a href="#" class="flex items-center gap-3 p-4 rounded-card border border-line hover:border-brand"><span class="grid place-items-center w-11 h-11 rounded bg-[#e7ecf8] text-trust font-extrabold text-[11px]">PDF</span><span class="flex-1"><span class="block font-bold" data-i18n="dl.warranty">Warranty certificate</span><span class="text-[13px] text-muted">PDF · 180 KB</span></span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= Cross-sell carousels ================= -->
+      <section class="mt-12" aria-labelledby="look-title">
+        <h2 id="look-title" class="section-title" data-i18n="pdp.look">Complete the look</h2>
+        <div class="carousel mt-6" data-carousel aria-label="Complete the look"><div class="carousel__track" data-look></div></div>
+      </section>
+      <section class="mt-12" aria-labelledby="viewed-title">
+        <h2 id="viewed-title" class="section-title" data-i18n="pdp.viewed">Customers also viewed</h2>
+        <div class="carousel mt-6" data-carousel aria-label="Customers also viewed"><div class="carousel__track" data-viewed></div></div>
+      </section>
+    </main>
+
+    <!-- In-store availability dialog -->
+    <dialog class="modal" aria-labelledby="stock-title" data-stock-dialog>
+      <div class="flex items-center justify-between p-5 border-b border-line">
+        <h2 id="stock-title" class="h3" data-i18n="pdp.stock">Check in-store availability</h2>
+        <button class="icon-btn" data-close-dialog data-i18n-aria="close" aria-label="Close"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <ul class="divide-y divide-line max-h-[60vh] overflow-y-auto" data-stock-list></ul>
+    </dialog>
+
+    <!-- Mobile sticky buy bar (liquid glass) -->
+    <div class="buy-bar flex items-center gap-3 p-2.5 ps-4" data-glass data-glass-type="pill" data-glass-tint=".75" data-buy-bar aria-hidden="true">
+      <div class="flex-1 min-w-0">
+        <p class="text-[12px] font-semibold truncate" data-bar-name></p>
+        <span data-bar-price></span>
+      </div>
+      <button class="btn btn-primary btn-sm" data-pdp-add tabindex="-1"><span data-i18n="card.add">Add to cart</span></button>
+    </div>
+
+    <!-- @include footer -->
+    <script type="module" src="/src/js/pages/product.js"></script>
+  </body>
+</html>

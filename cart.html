@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- @include head -->
+    <title>Your cart — EL Arika</title>
+    <meta name="description" content="Review your cart, choose delivery and assembly, and pay securely: CIB, Edahabia, cash on delivery or 0% instalments." />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <main id="main" class="container-x pt-6 pb-16">
+      <!-- Progress indicator -->
+      <nav aria-label="Checkout steps" class="max-w-[760px] mx-auto">
+        <ol class="steps" data-steps>
+          <li class="step" data-step="1"><span data-i18n="co.s1">Cart</span></li>
+          <li class="step" data-step="2"><span data-i18n="co.s2">Delivery</span></li>
+          <li class="step" data-step="3"><span data-i18n="co.s3">Payment</span></li>
+          <li class="step" data-step="4"><span data-i18n="co.s4">Confirmation</span></li>
+        </ol>
+      </nav>
+
+      <div class="mt-8 grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+        <div class="min-h-[60vh]" data-step-view aria-live="polite"></div>
+
+        <!-- Sticky order summary -->
+        <aside class="lg:sticky lg:top-[150px] rounded-card border border-line bg-white shadow-card" aria-labelledby="sum-title" data-summary>
+          <div class="p-5 border-b border-line">
+            <h2 id="sum-title" class="h3" data-i18n="co.summary">Order summary</h2>
+          </div>
+          <dl class="p-5 grid grid-cols-[1fr_auto] gap-y-2.5 text-[15px]" data-summary-lines></dl>
+          <div class="px-5 pb-5" data-summary-actions></div>
+          <div class="px-5 py-4 border-t border-line bg-surface rounded-b-card text-[13px] text-muted-strong flex items-center gap-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-success shrink-0" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+            <span data-i18n="co.secure">Secure checkout · CIB, Edahabia, Visa, Mastercard, cash on delivery</span>
+          </div>
+        </aside>
+      </div>
+
+      <section class="mt-14" aria-labelledby="reco-title" data-reco>
+        <h2 id="reco-title" class="section-title" data-i18n="offers.title">Best offers of the week</h2>
+        <div class="carousel mt-6" data-carousel aria-label="Best offers of the week"><div class="carousel__track" data-reco-track></div></div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="/src/js/pages/cart.js"></script>
+  </body>
+</html>

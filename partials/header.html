@@ -1,0 +1,99 @@
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+<!-- ===================== 1. TOP UTILITY BAR ===================== -->
+<div class="bg-brand text-white on-red text-[13px] font-semibold">
+  <div class="container-x flex items-center justify-between gap-4 h-9">
+    <p class="flex-1 min-w-0 truncate text-[12px] lg:text-[13px]" aria-live="polite" data-utility-rotator>
+      <span data-i18n="util.1">Free delivery &amp; assembly on orders over 150 000 DA</span>
+    </p>
+    <div class="hidden lg:flex items-center gap-5">
+      <a href="stores.html" class="inline-flex items-center gap-1.5 hover:underline">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <span data-i18n="util.store">Find your nearest store</span>
+      </a>
+      <a href="components.html" class="hover:underline" data-i18n="util.help">Help &amp; contact</a>
+    </div>
+    <div class="flex items-center rounded-pill bg-black/20 p-0.5" role="group" aria-label="Language">
+      <button class="px-2.5 py-0.5 rounded-pill aria-pressed:bg-white aria-pressed:text-brand" data-lang-switch="en" aria-pressed="true" lang="en">EN</button>
+      <button class="px-2.5 py-0.5 rounded-pill aria-pressed:bg-white aria-pressed:text-brand" data-lang-switch="ar" aria-pressed="false" lang="ar">عربي</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 2. MAIN HEADER (sticky) ===================== -->
+<header class="site-header sticky top-0 z-50 bg-white border-b border-line">
+  <div class="container-x">
+    <div class="flex items-center gap-2 lg:gap-8 h-16 lg:h-20">
+      <button class="icon-btn lg:hidden -ms-2" data-drawer-open="nav-drawer" aria-controls="nav-drawer" aria-expanded="false" data-i18n-aria="menu.open" aria-label="Open menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <!-- Logo: original EL Arika wordmark -->
+      <a href="index.html" class="flex items-center gap-2 shrink-0 text-brand" aria-label="EL Arika — home">
+        <svg class="w-9 h-9 lg:w-11 lg:h-11" viewBox="0 0 100 100" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M50 5 L95 43 Q96 44 96 46 V88 Q96 95 89 95 H11 Q4 95 4 88 V46 Q4 44 5 43 Z M50 27 L73 95 H60 L56.5 82 H43.5 L40 95 H27 Z M50 48 L54.5 70 H45.5 Z"/></svg>
+        <span class="leading-none">
+          <span class="block font-extrabold text-[22px] lg:text-[26px] tracking-tight" lang="en">EL ARIKA</span>
+          <span class="hidden lg:block text-[10px] font-bold uppercase tracking-[.16em] text-ink" data-i18n="tagline">Our strength is the price</span>
+        </span>
+      </a>
+
+      <!-- Search (desktop) -->
+      <form class="hidden lg:flex flex-1 max-w-[720px] relative" role="search" action="category.html" data-search>
+        <label for="q" class="sr-only" data-i18n="search.label">Search products</label>
+        <input id="q" name="q" type="search" role="combobox" autocomplete="off" class="input is-filled rounded-pill! h-12 ps-6 pe-16 text-[15px]" placeholder="What are you looking for?" data-i18n-placeholder="search.ph" aria-autocomplete="list" aria-controls="q-suggest" aria-expanded="false" />
+        <button class="absolute end-1 top-1 h-10 w-12 rounded-pill bg-brand text-white grid place-items-center hover:bg-brand-dark" data-i18n-aria="search.go" aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <div id="q-suggest" class="absolute inset-x-0 top-[calc(100%+6px)] bg-white rounded-card shadow-pop border border-line overflow-hidden z-50" role="listbox" hidden></div>
+      </form>
+
+      <!-- Header icons -->
+      <nav class="flex items-center gap-0.5 lg:gap-1 ms-auto" aria-label="Account">
+        <a href="stores.html" class="icon-btn hidden md:inline-grid" data-i18n-aria="icons.store" aria-label="Store locator">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        </a>
+        <a href="components.html" class="icon-btn hidden md:inline-grid" data-i18n-aria="icons.account" aria-label="Account">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+        </a>
+        <a href="category.html?cat=wishlist" class="icon-btn" data-i18n-aria="icons.wish" aria-label="Wishlist">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-9.3-9.2C1.5 7.5 3.6 4 7.1 4c2 0 3.6 1.1 4.9 2.8C13.3 5.1 14.9 4 16.9 4c3.5 0 5.6 3.5 4.4 6.8C19.5 15.4 12 20 12 20z"/></svg>
+          <span class="absolute top-1 end-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-ink text-white text-[11px] font-bold grid place-items-center" data-wish-count hidden>0</span>
+        </a>
+        <a href="cart.html" class="icon-btn" data-i18n-aria="icons.cart" aria-label="Cart">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
+          <span class="absolute top-1 end-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-brand text-white text-[11px] font-bold grid place-items-center" data-cart-count hidden>0</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Search (mobile: full width under the header row) -->
+    <form class="lg:hidden pb-3 relative" role="search" action="category.html" data-search>
+      <label for="q-m" class="sr-only" data-i18n="search.label">Search products</label>
+      <input id="q-m" name="q" type="search" autocomplete="off" class="input is-filled rounded-pill! h-11 ps-5 pe-14" placeholder="What are you looking for?" data-i18n-placeholder="search.ph" />
+      <button class="absolute end-1 top-1 h-9 w-11 rounded-pill bg-brand text-white grid place-items-center" data-i18n-aria="search.go" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- ===================== 3. MEGA-MENU BAR ===================== -->
+  <nav class="hidden lg:block border-t border-line relative" aria-label="Categories" data-mega>
+    <ul class="container-x flex items-center justify-between h-[52px]" data-mega-list></ul>
+  </nav>
+</header>
+
+<!-- Mobile navigation drawer (accordions) -->
+<div class="scrim" data-scrim></div>
+<aside id="nav-drawer" class="drawer" aria-label="Menu" aria-hidden="true" inert>
+  <div class="flex items-center justify-between px-4 h-16 border-b border-line">
+    <span class="font-extrabold text-brand text-xl">EL ARIKA</span>
+    <button class="icon-btn" data-drawer-close data-i18n-aria="close" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="px-4" aria-label="Categories" data-mobile-nav></nav>
+  <div class="p-4 grid gap-2 border-t border-line">
+    <a class="btn btn-secondary btn-sm" href="stores.html" data-i18n="util.store">Find your nearest store</a>
+    <a class="btn btn-ghost btn-sm" href="components.html" data-i18n="icons.account">Account</a>
+  </div>
+</aside>

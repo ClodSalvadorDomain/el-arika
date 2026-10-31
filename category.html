@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- @include head -->
+    <title>Sofas at the lowest price — EL Arika</title>
+    <meta name="description" content="Shop sofas, corner sofas and sofa beds at EL Arika: the lowest prices, 0% financing, delivery and assembly across Algeria." />
+  </head>
+  <body>
+    <!-- @include header -->
+
+    <main id="main" class="container-x pb-12">
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="pt-5 text-[13px] text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="index.html" class="hover:text-brand" data-i18n="bc.home">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li><span aria-current="page" class="font-semibold text-ink" data-crumb>Sofas</span></li>
+        </ol>
+      </nav>
+
+      <!-- Title + count -->
+      <header class="mt-3 flex flex-col md:flex-row md:items-end justify-between gap-3">
+        <div>
+          <h1 class="h2 lg:text-[40px]!" data-cat-title>Sofas</h1>
+          <p class="mt-1 text-muted" aria-live="polite"><span data-cat-count>0</span> <span data-i18n="cat.products">products</span></p>
+        </div>
+        <div class="flex items-center gap-2 rounded-card bg-promo px-4 py-2.5 text-[13px] font-bold text-[#5a3a00]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>
+          <span data-i18n="cat.finance">Pay in 12 instalments at 0% on every product</span>
+        </div>
+      </header>
+
+      <!-- Sub-category chips -->
+      <div class="mt-5 flex gap-2 overflow-x-auto no-scrollbar pb-1 min-h-[44px]" data-subcats></div>
+
+      <p class="mt-4 rounded-card border border-line bg-surface px-4 py-3 text-sm" data-search-note hidden></p>
+
+      <div class="mt-6 grid lg:grid-cols-[272px_1fr] gap-8 items-start">
+        <!-- ============ Filters sidebar (drawer on mobile) ============ -->
+        <aside id="filters" class="drawer lg:transform-none! lg:shadow-none lg:w-auto lg:z-auto lg:sticky lg:top-[150px] lg:bottom-auto lg:max-h-[calc(100vh-170px)] lg:overflow-y-auto lg:pe-2" aria-label="Filters" data-filters>
+          <div class="flex items-center justify-between px-4 h-16 border-b border-line lg:hidden">
+            <span class="font-bold text-lg" data-i18n="f.title">Filters</span>
+            <button class="icon-btn" data-drawer-close data-i18n-aria="close" aria-label="Close"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+          </div>
+          <form class="px-4 lg:px-0 divide-y divide-line" data-filter-form>
+            <fieldset class="py-5">
+              <legend class="font-bold mb-3" data-i18n="f.price">Price</legend>
+              <div class="range" data-range>
+                <div class="range__track"></div><div class="range__fill" data-range-fill></div>
+                <input type="range" name="min" step="1000" aria-label="Minimum price" data-i18n-aria="f.min" />
+                <input type="range" name="max" step="1000" aria-label="Maximum price" data-i18n-aria="f.max" />
+              </div>
+              <div class="mt-3 flex justify-between text-sm font-semibold"><output data-range-min></output><output data-range-max></output></div>
+            </fieldset>
+            <fieldset class="py-5" data-width-group>
+              <legend class="font-bold mb-3" data-i18n="f.width">Width</legend>
+              <div class="flex flex-wrap gap-2" data-widths></div>
+            </fieldset>
+            <fieldset class="py-5">
+              <legend class="font-bold mb-3" data-i18n="f.color">Colour</legend>
+              <div class="flex flex-wrap gap-3" data-colors></div>
+            </fieldset>
+            <fieldset class="py-5">
+              <legend class="font-bold mb-2" data-i18n="f.material">Material</legend>
+              <div data-materials></div>
+            </fieldset>
+            <fieldset class="py-5">
+              <legend class="font-bold mb-2" data-i18n="f.style">Style</legend>
+              <div data-styles></div>
+            </fieldset>
+            <fieldset class="py-5">
+              <legend class="font-bold mb-2" data-i18n="f.avail">Availability</legend>
+              <label class="check"><input type="checkbox" name="avail" value="online" /><span data-i18n="f.online">Available online</span></label>
+              <label class="check"><input type="checkbox" name="avail" value="store" /><span data-i18n="f.instore">Available in store</span></label>
+              <label class="check"><input type="checkbox" name="promo" value="1" /><span data-i18n="f.promo">Promotions only</span></label>
+            </fieldset>
+          </form>
+          <div class="sticky bottom-0 bg-white p-4 border-t border-line grid grid-cols-2 gap-2 lg:hidden">
+            <button class="btn btn-ghost btn-sm" data-clear-filters data-i18n="f.clear">Clear all</button>
+            <button class="btn btn-primary btn-sm" data-drawer-close><span data-i18n="f.show">Show</span>&nbsp;<span data-cat-count>0</span></button>
+          </div>
+        </aside>
+
+        <!-- ============ Results ============ -->
+        <section aria-labelledby="results-title">
+          <h2 id="results-title" class="sr-only" data-i18n="cat.results">Products</h2>
+          <div class="flex items-center justify-between gap-3 pb-4 border-b border-line">
+            <button class="btn btn-ghost btn-sm lg:hidden" data-drawer-open="filters" aria-controls="filters" aria-expanded="false">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+              <span data-i18n="f.title">Filters</span>
+            </button>
+            <div class="hidden lg:flex flex-wrap gap-2" data-active-filters></div>
+            <label class="ms-auto flex items-center gap-2 text-sm font-semibold">
+              <span class="hidden sm:inline" data-i18n="sort.label">Sort by</span>
+              <select class="input h-10! min-h-10! w-auto text-sm" data-sort>
+                <option value="relevance" data-i18n="sort.relevance">Relevance</option>
+                <option value="price-asc" data-i18n="sort.asc">Price: low to high</option>
+                <option value="price-desc" data-i18n="sort.desc">Price: high to low</option>
+                <option value="discount" data-i18n="sort.discount">Biggest discount</option>
+                <option value="rating" data-i18n="sort.rating">Best rated</option>
+              </select>
+            </label>
+          </div>
+          <div class="lg:hidden flex flex-wrap gap-2 mt-3" data-active-filters></div>
+
+          <div class="mt-5 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5" data-grid aria-live="polite"></div>
+
+          <div class="mt-8 flex flex-col items-center gap-3" data-load-more-wrap>
+            <p class="text-sm text-muted" data-progress-text></p>
+            <div class="w-56 h-1 rounded bg-line overflow-hidden"><div class="h-full bg-brand transition-all" data-progress-bar style="width:0"></div></div>
+            <button class="btn btn-secondary" data-load-more data-i18n="cat.more">Load more</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- SEO text block -->
+      <section class="mt-14 pt-8 border-t border-line max-w-[880px] text-[15px] text-muted-strong leading-relaxed" aria-labelledby="seo-title">
+        <h2 id="seo-title" class="h3 text-ink" data-seo-title>Sofas at the lowest price in Algeria</h2>
+        <div class="mt-3 grid gap-3" data-seo-body>
+          <p>Whether you are furnishing a first apartment in Alger or renewing the family living room in Oran, EL Arika brings you hundreds of sofas at prices that are hard to beat: 2-seater and 3-seater sofas, generous corner sofas with reversible chaise, practical sofa beds for guests and matching armchairs.</p>
+          <p>Every model is available in several fabrics and colours, from easy-care fabric to soft velvet and leatherette. Check the dimensions in the product sheet, then choose home delivery and professional assembly — or collect for free in one of our 14 stores. Pay in up to 12 instalments at 0%.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include footer -->
+    <script type="module" src="/src/js/pages/category.js"></script>
+  </body>
+</html>
